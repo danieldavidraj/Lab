@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1578889062 source:z:\sem 2\object oriented lab\lab\mock test\mock test.cpp
+	"mock test.h"
+	<iostream>
+
+1578887958 source:z:\sem 2\object oriented lab\lab\mock test\main.cpp
+	"mock test.h"
+	<iostream>
+	<string.h>
+
+1578889953 z:\sem 2\object oriented lab\lab\mock test\mock test.h
+

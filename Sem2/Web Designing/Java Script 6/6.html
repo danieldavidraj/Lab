@@ -1,0 +1,34 @@
+<html>
+	<head>
+		<title>6</title>
+		<style>
+			input
+			{
+				margin-left:10px;
+			}
+		</style>
+	</head>
+	<body>
+		Enter the string:<input id="input" onblur="Input()"><br><br>
+		<div id="div">
+		</div>
+		<script>
+			function Input()
+			{
+				var x=document.getElementById("input").value;
+				x=Upper(x);
+				document.getElementById("div").innerHTML=x;
+			}
+			function Upper(x)
+			{
+				x=x.toLowerCase().split(' ');
+				for(var i=0;i<x.length;i++)
+				{
+					x[i]=x[i].charAt(0).toUpperCase()+x[i].substring(1);
+				}
+				x=x.join(' ');
+				return x;
+			}
+		</script>
+	</body>
+</html>

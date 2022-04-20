@@ -1,0 +1,66 @@
+<html>
+	<head>
+		<title>6</title>
+		<style>
+			body
+			{
+				font-family:verdana;
+			}
+			div
+			{
+				border:solid yellow;
+				height:100px;
+				width:500px;
+				text-align:center;
+				font-size:50px;
+				padding-top:12px;
+				box-sizing:border-box;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+		Number 1:<input id="one"><br><br>
+		Number 2:<input id="two"><br><br>
+		<input type="reset" onclick="Reset()">
+		</form>
+		<button onclick="Sum()">SUM</button>
+		<button onclick="Product()">PRODUCT</button>
+		<button onclick="Difference()">DIFFERENCE</button>
+		<button onclick="Quotient()">QUOTIENT</button>
+		<h1>ANSWER:</h1>
+		<div id="div">
+		</div>
+		<script>
+			var a,b;
+			function Sum()
+			{
+				a=parseInt(document.getElementById("one").value);
+				b=parseInt(document.getElementById("two").value);
+				document.getElementById("div").innerHTML=a+b;
+			}
+			function Product()
+			{
+				a=parseInt(document.getElementById("one").value);
+				b=parseInt(document.getElementById("two").value);
+				document.getElementById("div").innerHTML=a*b;
+			}
+			function Difference()
+			{
+				a=parseInt(document.getElementById("one").value);
+				b=parseInt(document.getElementById("two").value);
+				document.getElementById("div").innerHTML=a-b;
+			}
+			function Quotient()
+			{
+				a=parseInt(document.getElementById("one").value);
+				b=parseInt(document.getElementById("two").value);
+				document.getElementById("div").innerHTML=(a/b).toFixed(2);
+			}
+			function Reset()
+			{
+				document.getElementById("div").innerHTML="";
+			}
+		</script>	
+	</body>
+</html>

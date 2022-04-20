@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>12</title>
+		<style>
+			input
+			{
+				margin-left:10px;
+			}
+		</style>
+	</head>
+	<body>
+		Enter the string to search:<input id="string"><br><br>
+		Enter the sub-string to search:<input id="substring">
+		<button onclick="String()">Search</button><br><br><br>
+		First occurence located at index:<input id="1"><br><br>
+		Last occurence located at index:<input id="2"><br><br>
+		First occurence from index<input id="3" size="3"> located at index:<input id="5"><br><br>
+		Last occurence from index<input id="4" size="3"> located at index:<input id="6"><br><br>
+		<script>
+			
+			function String()
+			{
+				var pos;
+				var x=document.getElementById("string").value;
+				var y=document.getElementById("substring").value;
+				pos=x.indexOf(y);
+				document.getElementById("1").value=pos;
+				pos=x.lastIndexOf(y);
+				document.getElementById("2").value=pos;
+				var a=document.getElementById("3").value;
+				var b=document.getElementById("4").value;
+				if(a.length!=0)
+				{
+					pos=x.indexOf(y,a);
+					document.getElementById("5").value=pos;
+				}
+				else
+				{
+					document.getElementById("5").value="";
+				}
+				if(b.length!=0)
+				{
+					pos=x.lastIndexOf(y,b);
+					document.getElementById("6").value=pos;
+				}
+				else
+				{
+					document.getElementById("6").value="";
+				}
+			}
+		</script>
+	</body>
+</html>

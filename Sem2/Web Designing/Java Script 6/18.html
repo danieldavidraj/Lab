@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>18</title>
+		<style>
+			input
+			{
+				width:30px;
+			}
+			div
+			{
+				text-align:center;
+				margin-top:20px;
+				font-family:verdana;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1"></div>
+		<h1>Sorted By title value</h1>
+		<div id="div2"></div>
+		<script>
+			//function Sort()
+			{
+				var library=[ {author:"Bill Gates",title:"The Road Ahead",libraryID:1254},
+							  {author:"Steve Jobs",title:"Walter Isaacson",libraryID:4264},
+							  {author:"Suzanne Collins",title:"Mockingjay:The Final Book of The Hunger Games",libraryID:3245} ];
+				document.getElementById("div1").innerHTML=library[0].author+" "+library[0].title+" "+library[0].libraryID+"<br>"+
+														 library[1].author+" "+library[1].title+" "+library[1].libraryID+"<br>"+
+														 library[2].author+" "+library[2].title+" "+library[2].libraryID+"<br>";
+				library=library.sort(function(a, b)
+									 {
+										var x = a.title.toLowerCase();
+										var y = b.title.toLowerCase();
+										if (x < y) {return -1;}
+										if (x > y) {return 1;}
+									 } );
+				document.getElementById("div2").innerHTML=library[0].author+" "+library[0].title+" "+library[0].libraryID+"<br>"+
+														 library[1].author+" "+library[1].title+" "+library[1].libraryID+"<br>"+
+														 library[2].author+" "+library[2].title+" "+library[2].libraryID+"<br>";
+			}
+		</script>
+	</body>
+</html>

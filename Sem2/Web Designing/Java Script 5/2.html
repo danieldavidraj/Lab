@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<title>2</title>
+		<style>
+			body
+			{
+				text-align:center;
+				margin-top:100px;
+				font-size:20px;
+			}
+			h2
+			{
+				border:yellow solid;
+				padding:10px;
+			}
+			p
+			{
+				text-align:left;
+				margin-left:450px;
+			}
+			input[type=reset]
+			{
+				height:50px;
+				width:100px;
+				border:none;
+				border-radius:5px;
+				font-size:18px;
+				font-family:verdana;
+				background-color: #5dade2 ;
+				cursor:pointer;
+				color:white;
+			}
+			input[type=reset]:hover
+			{
+				background-color: #2e86c1;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Celcius to Fahrenheit</h2>
+	<p>Insert a number into one of the input fields below:</p>
+	<form>
+	<p><input id="c" onkeyup="convert('C')"> degrees Celsius</p>
+	<p><input id="f" onkeyup="convert('F')"> degrees Fahrenheit</p>
+	<input type="reset">
+	</form>
+	<script>
+		function convert(degree) 
+		{
+			var x;
+			if(degree == "C") 
+			{
+				x=document.getElementById("c").value * 9 / 5 + 32;
+				document.getElementById("f").value = Math.round(x);
+			} 
+			else 
+			{
+				x=(document.getElementById("f").value -32) * 5 / 9;
+				document.getElementById("c").value = Math.round(x);
+			}
+		}
+	</script>
+	</body>
+</html>

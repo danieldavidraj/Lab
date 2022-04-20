@@ -1,0 +1,224 @@
+<html>
+	<head>
+		<title>14</title>
+		<style>
+			.main
+			{
+				border:solid 2px;
+				border-color:black;
+				padding:10px;
+				box-sizing:border-box;
+				margin-left:10px;
+				width:100px;
+			}
+			table
+			{
+				text-align: center;
+				padding-left:10px;
+			}
+			th,td
+			{
+				padding:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			<textarea cols="50" rows="5" id="area" onblur="Maths()" placeholder="Enter the values with comma in between.......">
+			</textarea><br><br>
+			<input type="reset">
+		</form>
+		<table cellspacing="0">
+			<tr>
+				<th class="main">Function</th>
+				<th class="main">Value</th>
+				<th class="main">Result</th>
+			</tr>
+			<tr>
+				<th>Math.PI</th>
+				<td>-</td>
+				<td id="1"></td>
+			</tr>
+			<tr>
+				<th>Math.round()</th>
+				<td id="2"></td>
+				<td id="3"></td>
+			</tr>
+			<tr>
+				<th>Math.pow()</th>
+				<td id="4"></td>
+				<td id="5"></td>
+			</tr>
+			<tr>
+				<th>Math.sqrt()</th>
+				<td id="6"></td>
+				<td id="7"></td>
+			</tr>
+			<tr>
+				<th>Math.abs()</th>
+				<td id="8"></td>
+				<td id="9"></td>
+			</tr>
+			<tr>
+				<th>Math.ceil()</th>
+				<td id="10"></td>
+				<td id="11"></td>
+			</tr>
+			<tr>
+				<th>Math.floor()</th>
+				<td id="12"></td>
+				<td id="13"></td>
+			</tr>
+			<tr>
+				<th>Math.sin()</th>
+				<td id="14"></td>
+				<td id="15"></td>
+			</tr>
+			<tr>
+				<th>Math.cos()</th>
+				<td id="16"></td>
+				<td id="17"></td>
+			</tr>
+			<tr>
+				<th>Math.min()</th>
+				<td id="18"></td>
+				<td id="19"></td>
+			</tr>
+			<tr>
+				<th>Math.max()</th>
+				<td id="20"></td>
+				<td id="21"></td>
+			</tr>
+			<tr>
+				<th>Math.random()</th>
+				<td>-</td>
+				<td id="22"></td>
+			</tr>
+		</table>
+		<script>
+			function Maths()
+			{
+				var d=document.getElementById("area").value;
+				var r=d.split(",");
+				PI();
+				Round(r);
+				Pow(r);
+				Sqrt(r);
+				Abs(r);
+				Ceil(r);
+				Floor(r);
+				Sin(r);
+				Cos(r);
+				Min(r);
+				Max(r);
+				Random();
+			}
+			function PI()
+			{
+				document.getElementById("1").innerHTML= Math.PI;
+			}
+			function Round(r)
+			{
+				var text=ans="";
+				for(var i=0;i<r.length;i++)
+				{
+					text+="&#x2243;"+r[i]+"<br>";
+					ans+=Math.round(r[i])+"<br>";
+				}
+				document.getElementById("2").innerHTML=text;
+				document.getElementById("3").innerHTML=ans;
+			}
+			function Pow(r)
+			{
+				var text=ans="";
+				for(var i=0;i<r.length;i++)
+				{
+					text+=r[i]+"<sup>2</sup><br>";
+					ans+=Math.pow(r[i],2)+"<br>";
+				}
+				document.getElementById("4").innerHTML=text;
+				document.getElementById("5").innerHTML=ans;
+			}
+			function Sqrt(r)
+			{
+				var text=ans="";
+				for(var i=0;i<r.length;i++)
+				{
+					text+="&radic;"+r[i]+"<br>";
+					ans+=Math.sqrt(r[i])+"<br>";
+				}
+				document.getElementById("6").innerHTML=text;
+				document.getElementById("7").innerHTML=ans;
+			}
+			function Abs(r)
+			{
+				var text=ans="";
+				for(var i=0;i<r.length;i++)
+				{
+					text+="|"+r[i]+"|<br>";
+					ans+=Math.abs(r[i])+"<br>";
+				}
+				document.getElementById("8").innerHTML=text;
+				document.getElementById("9").innerHTML=ans;
+			}
+			function Ceil(r)
+			{
+				var text=ans="";
+				for(var i=0;i<r.length;i++)
+				{
+					text+=+r[i]+"<br>";
+					ans+=Math.ceil(r[i])+"<br>";
+				}
+				document.getElementById("10").innerHTML=text;
+				document.getElementById("11").innerHTML=ans;
+			}
+			function Floor(r)
+			{
+				var text=ans="";
+				for(var i=0;i<r.length;i++)
+				{
+					text+=+r[i]+"<br>";
+					ans+=Math.floor(r[i])+"<br>";
+				}
+				document.getElementById("12").innerHTML=text;
+				document.getElementById("13").innerHTML=ans;
+			}
+			function Sin(r)
+			{
+				var text=ans="";
+				for(var i=0;i<r.length;i++)
+				{
+					text+=+r[i]+"<br>";
+					ans+=Math.sin(r[i])+"<br>";
+				}
+				document.getElementById("14").innerHTML=text;
+				document.getElementById("15").innerHTML=ans;
+			}
+			function Cos(r)
+			{
+				var text=ans="";
+				for(var i=0;i<r.length;i++)
+				{
+					text+=+r[i]+"<br>";
+					ans+=Math.cos(r[i])+"<br>";
+				}
+				document.getElementById("16").innerHTML=text;
+				document.getElementById("17").innerHTML=ans;
+			}
+			function Min(r)
+			{
+				document.getElementById("18").innerHTML=r;
+				document.getElementById("19").innerHTML=Math.min.apply(null,r);
+			}
+			function Max(r)
+			{
+				document.getElementById("20").innerHTML=r;
+				document.getElementById("21").innerHTML=Math.max.apply(null,r);
+			}
+			function Random()
+			{
+				document.getElementById("22").innerHTML= Math.random();
+			}
+		</script>
+	</body>
+</html>

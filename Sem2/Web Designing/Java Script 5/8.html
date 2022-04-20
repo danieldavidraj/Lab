@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>8</title>
+		<style>
+			body
+			{
+				font-family:verdana;
+			}
+			div
+			{
+				border:solid yellow;
+				height:200px;
+				width:700px;
+				text-align:center;
+				font-size:30px;
+				padding-top:12px;
+				box-sizing:border-box;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			Number 1:<input id="one" onkeyup="Count()"><br><br>
+			Number 2:<input id="two" onkeyup="Count()"><br><br>
+			Number 3:<input id="three" onkeyup="Count()"><br><br>
+			Number 4:<input id="four" onkeyup="Count()"><br><br>
+			Number 5:<input id="five" onkeyup="Count()"><br><br>
+			<input type="reset" onclick="Reset()">
+		</form>
+		<h1>ANSWER:</h1>
+		<div id="div">
+		</div>
+		<script>
+			function Count()
+			{
+				var count=new Array(5);
+				var pos=neg=zero=0;
+				count[0]=parseInt(document.getElementById("one").value);
+				count[1]=parseInt(document.getElementById("two").value);
+				count[2]=parseInt(document.getElementById("three").value);
+				count[3]=parseInt(document.getElementById("four").value);
+				count[4]=parseInt(document.getElementById("five").value);
+				var i;
+				for(i=0;i<5;i++)
+				{
+					if(count[i].length!=0)
+					{
+						if(count[i]>0)
+						{
+							pos++;
+						}	
+						else if(count[i]<0)
+						{
+							neg++;
+						}
+						else if(count[i]==0)
+						{
+							zero++;
+						}	
+					}
+				}
+				document.getElementById("div").innerHTML="Positive numbers:"+pos+
+														 "<br>Negative Numbers:"+neg+
+														 "<br>Zeros:"+zero;
+			}
+			function Reset()
+			{
+				document.getElementById("div").innerHTML="";
+			}
+		</script>	
+	</body>
+</html>

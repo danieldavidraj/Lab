@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>4</title>
+		<style>
+			input
+			{
+				margin-left:10px;
+			}
+		</style>
+	</head>
+	<body>
+		Enter the integer:<input id="input"><br><br>
+		<button onclick="Reverse()">Reverse</button><br><br>
+		<div id="div">
+		</div>
+		<script>
+			function Reverse()
+			{
+				var x=document.getElementById("input").value;
+				var remainder,rev=0;
+				while(x!=0) 
+				{
+					remainder=x%10;
+					rev=(rev*10)+remainder;
+					x=Math.floor(x/10);
+				}
+				document.getElementById("div").innerHTML="Reversed Number:"+rev;
+				window.status="Reversed Number:"+rev;
+			}
+		</script>
+	</body>
+</html>

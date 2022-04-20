@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title>4</title>
+	</head>
+	<body>
+		<button onclick="X1()">X<sub>1</sub></button>
+		<button onclick="X2()">X<sub>2</sub></button>
+		<button onclick="Y1()">Y<sub>1</sub></button>
+		<button onclick="Y2()">Y<sub>2</sub></button><br><br>
+		<button onclick="result()">Calculate</button>
+		<p id="1"></p>
+		<p id="2"></p>
+		<p id="3"></p>
+		<p id="4"></p>
+		<p id="result"></p>
+		<script>
+			var x1,x2,y1,y2;
+			function X1()
+			{
+				x1=prompt("Enter value of X1");
+				document.getElementById("1").innerHTML="X1="+x1;
+			}
+			function X2()
+			{
+				x2=prompt("Enter value of X2");
+				document.getElementById("2").innerHTML="X2="+x2;
+			}
+			function Y1()
+			{
+				y1=prompt("Enter value of Y1");
+				document.getElementById("3").innerHTML="Y1="+y1;
+			}
+			function Y2()
+			{
+				y2=prompt("Enter value of Y2");
+				document.getElementById("4").innerHTML="Y2="+y2;
+			}
+			function result()
+			{
+				var x=Math.sqrt( (Math.pow(x2-x1,2))+(Math.pow(y2-y1,2)));
+				document.getElementById("result").innerHTML="Distance="+parseFloat(x);
+				alert("Distance="+x);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,81 @@
+<html>
+	<head>
+		<title>3</title>
+	</head>
+<body>
+	<button type="button" onclick="Principal();">Enter the Principal</button>
+	<p id="principal"></p>
+	<button type="button" onclick="Rate();">Enter the Rate of interest</button>
+	<p id="rate"></p>
+	<button type="button" onclick="Duration()">Enter the Duration of years</button>
+	<p id="duration"></p>
+	<button type="button" onclick="Result()">Calculate</button>
+	<p id="interest"></p>
+	<p id="compound"></p>
+	<script>
+	var principal;
+	function Principal() 
+	{
+		var txt;
+		principal=prompt("Enter the principal:");
+		if(principal == null || principal == "") 
+		{
+			txt = "Please Enter :(";
+		} 
+		else 
+		{
+			txt ="Principal:"+principal;
+		}
+		document.getElementById("principal").innerHTML = txt;
+	}
+	var rate;
+	function Rate()
+	{
+		var txt;
+		rate=prompt("Enter the rate of interest:");
+		if(rate==null || rate=="")
+		{
+			txt="Please Enter :(";
+		}
+		else
+		{
+			txt="Rate of Interest:"+rate;
+		}
+		document.getElementById("rate").innerHTML=txt;
+	}
+	var duration;
+	function Duration()
+	{
+		var txt;
+		duration=prompt("Enter the Duration of years:");
+		if(duration==null || duration=="")
+		{
+			txt="Please Enter :(";
+		}
+		else
+		{
+			txt="Duration of years:"+duration;
+		}
+		document.getElementById("duration").innerHTML=txt;
+	}
+	function Result()
+	{
+		var interest,compound;
+		if(principal!=null && principal!="" && rate!=null && rate!="" && duration!=null && duration!="")
+		{
+			interest=(principal*duration*rate/100);
+			compound=(principal*((1+ (rate/100) )^duration))
+			document.getElementById("interest").innerHTML="Simple Interest="+interest;
+			document.getElementById("compound").innerHTML="Compound Interest="+compound;
+			alert("Simple Interest:"+interest+"\n"+"Compound Interest:"+compound);
+		}
+		else
+		{
+			document.getElementById("interest").innerHTML="Simple Interest=Enter the values";
+			document.getElementById("compound").innerHTML="Compound Interest=Enter the values";
+		}
+	}
+	</script>
+
+</body>
+</html>

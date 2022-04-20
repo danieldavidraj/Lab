@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>17</title>
+		<style>
+			table
+			{
+				margin:auto;
+				font-size:20px;
+				text-align:center;
+			}
+			td
+			{
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<table cellspacing="20">
+			<tr>
+				<th>Name</th>
+				<th>Time Worked</th>
+				<th>Hourly Rate</th>
+				<th>Gross Pay</th>
+			</tr>
+			<tr>
+				<td id="name"></td>
+				<td id="time"></td>
+				<td id="rate"></td>
+				<td id="pay"></td>
+			<tr>
+		</table>
+		<script>
+			var name,time,rate,pay;
+			var text1=text2=text3=text4="";
+			var i;
+			for(i=0;i<3;i++)
+			{
+				name=prompt("Enter the employee name");
+				time=parseInt(prompt("Enter the hours the employee worked"));
+				rate=parseInt(prompt("Enter the hourly rate of the employee"));
+				if(time<=40)
+				{
+					pay=time*rate;
+				}
+				else
+				{
+					time=time-40;
+					pay= (40*rate) + (time* (rate/2) );
+					time=time+40;
+				}
+				text1+=name + "<br>";
+				text2+=time + "<br>";
+				text3+=rate + "<br>";
+				text4+=pay + "<br>";
+			}
+			document.getElementById("name").innerHTML=text1;
+			document.getElementById("time").innerHTML=text2;
+			document.getElementById("rate").innerHTML=text3;
+			document.getElementById("pay").innerHTML=text4;
+		</script>
+	</body>
+</html>

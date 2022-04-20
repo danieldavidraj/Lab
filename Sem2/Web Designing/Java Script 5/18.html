@@ -1,0 +1,73 @@
+<html>
+	<head>
+		<title>19</title>
+		<style>
+			div
+			{
+				border:solid 3px transparent;
+				border-image:linear-gradient(to right,red,violet,yellow);
+				border-image-slice:1;
+				padding:25px;
+				height:200px;
+				width:700px;
+				font-size:100px;
+				text-align:center;
+				padding-top:30px;
+				box-sizing:border-box;
+				text-shadow:0px 0px 10px #ffff00;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="Input()">INPUT</button>
+		<h1>ENCRYPTED CODE:</h1>
+		<div id="div">
+		</div>
+		<script>
+			var a;
+			function Input()
+			{
+				a=prompt("Enter the Four Digit code");
+				Check(a);
+			}
+			function Check(a)
+			{
+				if(a.length!=4)
+				{
+					alert("Please Enter Four Digit Code");
+					Input();
+				}
+				else
+				{
+					Encode(a);
+				}
+			}
+			function Encode(a)
+			{
+				a=parseInt(a);
+				var d1,d2,d3,d4;
+				d1=Math.floor(a/1000);
+				a=a%1000;
+				d2=Math.floor(a/100);
+				a=a%100;
+				d3=Math.floor(a/10);
+				a=a%10;
+				d4=a;
+				d1=(d1+7)%10;
+				d2=(d2+7)%10;
+				d3=(d3+7)%10;
+				d4=(d4+7)%10;
+				var t;
+				t=d1;
+				d1=d3;
+				d3=t;
+				t=d2;
+				d2=d4;
+				d4=t;
+				a=new Array(d1,d2,d3,d4);
+				a=a.join("");
+				document.getElementById("div").innerHTML=a;
+			}
+		</script>
+	</body>
+</html>

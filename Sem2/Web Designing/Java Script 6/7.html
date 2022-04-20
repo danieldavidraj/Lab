@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>7</title>
+		<style>
+			input
+			{
+				margin-left:10px;
+			}
+		</style>
+	</head>
+	<body>
+		Enter the hours parked:<input id="input"><br><br>
+		<button onclick="calculateCharges()">Display Charge</button><br><br>
+		<div id="div">
+		</div>
+		<script>
+			var total=0;
+			function calculateCharges()
+			{
+				var x=document.getElementById("input").value;
+				var charge;
+				if(x<=3)
+				{
+					charge=x*2;
+				}
+				else
+				{
+					x=x-3;
+					charge=6+(x*2.5);
+					x=x+3;
+				}
+				if(charge>10)
+				{
+					charge=10;
+				}
+				total+=charge;
+				document.getElementById("div").innerHTML="Current Customer:$"+charge+
+														 "<br><br>Running Total:$"+total;
+			}
+		</script>
+	</body>
+</html>

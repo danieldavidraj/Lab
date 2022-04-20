@@ -1,0 +1,110 @@
+<html>
+	<head>
+		<title>practise2</title>
+	<style>
+		body
+		{
+			font-family:Verdana;
+		}
+		table
+		{
+			height:700;
+			width:900;
+		}
+		h1
+		{
+			font-weight:bold;
+		}
+		a
+		{
+			color:black;
+			margin-left:70px;
+		}
+		a.three
+		{
+			margin:initial;
+		}
+		img
+		{
+			margin:auto;
+		}
+		input[type=text],input[type=email],input[type=password]
+		{
+			border:none;
+			border-bottom:1px solid lightgrey;
+			padding:10px;
+			width:300px;
+			box-sizing:border-box;
+			transition:1s;
+			font-size:15px;
+			padding-left:30px;
+			background-size:20px 20px;
+			background-position:left;
+			background-repeat:no-repeat;
+			cursor:pointer;
+		}
+		input[type=text]
+		{
+			background-image:url("profile.png");
+		}
+		input[type=email]
+		{
+			background-image:url("message.png");
+		}
+		input[type=password].one
+		{
+			background-image:url("lock1.png");
+		}
+		input[type=password].two
+		{
+			background-image:url("lock2.png");
+		}
+		input[type=text]:focus,input[type=email]:focus,input[type=password]:focus
+		{
+			border-bottom:1px solid black;
+		}
+		.check
+		{
+			border-radius:2px;
+		}
+		input[type=submit]
+		{
+			background-color: #5dade2 ;
+			padding:20px 30px;
+			color:white;
+			font-weight:bold;
+			border-radius:5px;
+			border:none;
+			cursor:pointer;
+		}
+		input[type=submit]:hover 
+		{
+			background-color: #2e86c1;
+		}
+	</style>
+	</head>
+	<body>
+		<table align="center" cellspacing="30">
+			<tr>
+				<td>
+					<h1>Sign Up</h1><br>
+					<form>
+						<input type="text" placeholder="Your Name"><br><br><br>
+						<input type="email" placeholder="Your Email"><br><br><br>
+						<input type="password" class="one" placeholder="Password"><br><br><br>
+						<input type="password" class="two" placeholder="Repeat your password"><br><br><br>
+						<label class="check">
+							<input type="checkbox">
+						</label>
+						I agree all statements in <a href="" class="three">Terms of service</a><br><br><br>
+						<input type="submit" value="Register">
+					</form>
+				</td>
+				<td>
+					<img src="practise.png"><br><br>
+					<a href="">I am already member</a>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

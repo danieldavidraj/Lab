@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>13</title>
+		<style>
+			div
+			{
+				font-size:25px;
+			}
+		</style>
+	</head>
+	<body>
+		Enter elements with space between of array 1:<input id="1"><br><br>
+		Enter elements with space between of array 2:<input id="2"><br><br>
+		<button onclick="Sum()">SUM</button>
+		<div id="div"></div>
+		<script>
+			function Sum()
+			{
+				var x,sum=[];
+				x=document.getElementById("1").value;
+				var arr1=x.split(" ");
+				x=document.getElementById("2").value;
+				var arr2=x.split(" ");
+				if(arr1.length!=arr2.length)
+				{
+					alert("Please Enter arrays of equal sizes");
+				}
+				else
+				{
+					for(var i=0;i<arr1.length;i++)
+					{
+						sum[i]=parseInt(arr1[i])+parseInt(arr2[i]);
+					}
+				}
+				document.getElementById("div").innerHTML="Sum:"+sum;
+			}
+		</script>
+	</body>
+</html>

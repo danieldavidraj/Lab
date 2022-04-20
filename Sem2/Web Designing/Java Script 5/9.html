@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>9</title>
+		<style>
+			body
+			{
+				text-align:center;
+				margin-top:200px;
+			}
+			div
+			{
+				height:100px;
+				width:500px;
+				border:3px solid transparent;
+				border-image: linear-gradient(to right, green, lightgreen);
+				border-image-slice: 1;
+				padding: 25px;
+				font-size:50px;
+				text-align:center;
+				padding-top:50px;
+				margin:auto;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+			Number 1:<input onkeyup="Check()" id="one"><br><br>
+			Number 2:<input onkeyup="Check()" id="two"><br><br>
+			<input type="reset" onclick="Reset()">
+		</form>
+		<div id="div">
+		</div>
+		<script>
+			var a,b;
+			function Check()
+			{
+				a=document.getElementById("one").value;
+				b=document.getElementById("two").value;
+				if(a.length!=0 && b.length!=0)
+				{
+					if(a%b==0)
+					{
+						document.getElementById("div").innerHTML=a + " is a multiply of " + b;
+					}
+					else
+					{
+						document.getElementById("div").innerHTML=a + " is a not multiply of " + b;
+					}
+				}
+			}
+			function Reset()
+			{
+				document.getElementById("div").innerHTML="";
+			}
+		</script>
+	</body>
+</html>

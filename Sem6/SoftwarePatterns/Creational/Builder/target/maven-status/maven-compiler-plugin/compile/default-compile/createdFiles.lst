@@ -1,0 +1,12 @@
+com\softwarepatterns\builder\components\Transmission.class
+com\softwarepatterns\builder\cars\Manual.class
+com\softwarepatterns\builder\components\GPSNavigator.class
+com\softwarepatterns\builder\cars\CarType.class
+com\softwarepatterns\builder\components\TripComputer.class
+com\softwarepatterns\builder\director\Director.class
+com\softwarepatterns\builder\builders\CarManualBuilder.class
+com\softwarepatterns\builder\cars\Car.class
+com\softwarepatterns\builder\Main.class
+com\softwarepatterns\builder\components\Engine.class
+com\softwarepatterns\builder\builders\Builder.class
+com\softwarepatterns\builder\builders\CarBuilder.class

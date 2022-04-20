@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1580702922 source:z:\sem 2\object oriented lab\c++ps_ii\2\main.cpp
+	<iostream>
+	"two.h"
+
+1580699975 source:z:\sem 2\object oriented lab\c++ps_ii\2\2.cpp
+
+1580702832 source:z:\sem 2\object oriented lab\c++ps_ii\2\two.cpp
+	<iostream>
+	"two.h"
+
+1580702790 z:\sem 2\object oriented lab\c++ps_ii\2\two.h
+

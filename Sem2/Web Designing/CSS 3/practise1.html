@@ -1,0 +1,103 @@
+<html>
+	<head>
+		<title>practise</title>
+	<style>
+		body
+		{
+			background-color:#ff004d;
+			font-family:verdana;
+		}
+		table
+		{
+			border-radius:20px;
+			background-color:white;
+			height:700;
+			width:1500;
+			border-collapse:collapse;
+		}
+		img
+		{
+			border-radius:20px 0px 0px 20px;
+			height:700;
+		}
+		input[type=text],input[type=date],select
+		{
+			border:none;
+			border-bottom:1px solid lightgrey;
+			padding:10px;
+			width:300px;
+			box-sizing:border-box;
+			transition:1s;
+			font-size:15px;
+			cursor:pointer;
+		}
+		input[type=text]:focus,input[type=date]:focus,select:focus
+		{
+			border:none;
+			border-bottom:1px solid black;
+			padding:10px;
+			width:300px;
+			box-sizing:border-box;
+		}
+		input[type=date]
+		{
+			background-image:url("calender.png");
+			background-position:right;
+			background-size:20px 20px;
+			background-repeat:no-repeat;
+		}
+		input[type=text]
+		{
+			width:700;
+		}
+		input[type=text]:focus
+		{
+			width:700;
+		}
+		input[type=submit]
+		{
+			background-color:#4ccb16;
+			padding:10px 30px;
+			color:white;
+			font-weight:bold;
+			border-radius:5px;
+			border:none;
+			cursor:pointer;
+		}
+		input[type=submit]:hover 
+		{
+			background-color: #45a049;
+		}
+		input[type=text].new
+		{
+			border:none;
+			width:300;
+		}
+	</style>
+	</head>
+	<body>
+		<br><br>
+		<table align="center">
+			<tr>
+				<td>
+					<img src="fruit.jpg">
+				</td>
+				<td>
+					<h1>REGISTRATION INFO</h1><br>
+					<form>
+						<input type="text" placeholder="Name"><br><br><br>
+						<input type="date" onfocus="(this.type='date')">&emsp;&emsp;&emsp;&emsp;
+						<select>
+							<option>Gender</option>
+							<option>Male</option>
+							<option>Female</option>
+						</select><br><br><br>
+						<input class="new" type="text" placeholder="Class"><br><br><br>
+						<input class="new" type="text" placeholder="Registration Code"><br><br><br>
+						<input type="submit" value="Search">
+					</form>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,6 @@
+com\softwarepatterns\decorator\decorators\DataSourceDecorator.class
+com\softwarepatterns\decorator\decorators\CompressionDecorator.class
+com\softwarepatterns\decorator\decorators\DataSource.class
+com\softwarepatterns\decorator\decorators\EncryptionDecorator.class
+com\softwarepatterns\decorator\decorators\FileDataSource.class
+com\softwarepatterns\decorator\Main.class

@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>5</title>
+		<style>
+			input
+			{
+				margin-left:10px;
+			}
+			div
+			{
+				font-size:20px;
+			}
+		</style>
+	</head>
+	<body>
+		Enter the word:<input id="input" onblur="Combination()"><br><br>
+		<div id="div">
+		</div>
+		<script>
+			var t,text;
+			function Combination()
+			{
+				var x=document.getElementById("input").value;
+				var start=0;						//Starting index of the string  
+				var end=x.length-1;					//Ending index of the string.
+				text="";
+				permute(x,start,end);
+				document.getElementById("div").innerHTML=text;
+			}
+			function permute(x,start,end)
+			{
+				if(start==end)
+				{
+					text+=x+"<br>";
+				}
+				else
+				{
+					for(var i=start;i<=end;i++)  
+					{  
+						x=Swap(x,start,i);			// Swapping done
+						permute(x,start+1,end);		// Recursion called  
+						x=Swap(x,start,i);			//backtrack
+					}
+				}
+			}
+			function Swap(x,start,i)
+			{
+				x=x.split("");
+				t=x[start];								
+				x[start]=x[i];
+				x[i]=t;
+				x=x.join("");
+				return x;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>15</title>
+		<style>
+			div
+			{
+				height:100%;
+				width:100%;
+			}
+		</style>
+	</head>
+	<body onmousedown="Event(event)">
+		<div id="text">
+		Event name if held Shift during the mouse click<br><br>
+		Element name that triggered the event if held Ctrl during the mouse click<br><br>
+		</div>
+		<script>
+			function Event(event)
+			{
+				if(event.shiftKey==1)
+				{
+					text = "The shift key was pressed!\n";
+					text+= "Event Type:"+event.type+"\n";
+				}
+				else
+				{
+					text = "The shift key was not pressed!\n";
+				}
+				if(event.ctrlKey==1)
+				{
+					text+= "The ctrl key was pressed!\n";
+					text+="Triggered Event:"+event.target.tagName
+				}
+				else
+				{
+					text+="The ctrl key was not pressed!\n";
+				}
+				alert(text);
+				document.getElementById("text").innerHTML=text;
+			}
+		</script>
+	</body>
+</html>

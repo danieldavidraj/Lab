@@ -1,0 +1,56 @@
+<html>
+	<head>
+		<title>5</title>
+	</head>
+	<body>
+		<form>
+			Side 1:<input onkeyup="Side1()" id="one">
+			<p id="1"></p>
+			Side 2:<input onkeyup="Side2()" id="two">
+			<p id="2"></p>
+			Side 3:<input onkeyup="Side3()" id="three">
+			<p id="3"></p>
+			<p id="result"></p>
+			<input type="reset" onclick="Reset()"> 
+		</form>
+		<script>
+			var side1,side2,side3;
+			function Side1()
+			{
+				side1=parseInt(document.getElementById("one").value);
+				document.getElementById("1").innerHTML="Side 1:"+side1;
+				Result();
+			}
+			function Side2()
+			{
+				side2=parseInt(document.getElementById("two").value);
+				document.getElementById("2").innerHTML="Side 2:"+side2;
+				Result();
+			}
+			function Side3()
+			{
+				side3=parseInt(document.getElementById("three").value);
+				document.getElementById("3").innerHTML="Side 3:"+side3;
+				Result();
+			}
+			var area;
+			function Result()
+			{
+				var s=(side1+side2+side3)/2;
+				area=Math.sqrt((s * (s-side1) * (s-side2) * (s-side3)) );
+				document.getElementById("result").innerHTML="Area:"+area;
+			}
+			function Reset()
+			{
+				side1=0;
+				side2=0;
+				side3=0;
+				area=0;
+				document.getElementById("1").innerHTML="Side 1:"+side1;
+				document.getElementById("2").innerHTML="Side 2:"+side2;
+				document.getElementById("3").innerHTML="Side 3:"+side3;
+				document.getElementById("result").innerHTML="Area:"+area;
+			}
+		</script>
+	</body>
+</html>

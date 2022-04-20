@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>8</title>
+		<style>
+			input
+			{
+				margin-left:10px;
+			}
+		</style>
+	</head>
+	<body>
+		Enter the string:<input id="string"><br><br>
+		Enter the letter:<input id="letter"><br><br>
+		<button onclick="Count()">Count</button><br><br>
+		<div id="div"></div>
+		<script>
+			function Count()
+			{
+				var count=0;
+				var x=document.getElementById("string").value;
+				var y=document.getElementById("letter").value;
+				for(var i=0;i<x.length;i++)
+				{
+					if(x.charAt(i)==y)
+					{
+						count++;
+					}
+				}
+				document.getElementById("div").innerHTML=count;
+			}
+		</script>
+	</body>
+</html>

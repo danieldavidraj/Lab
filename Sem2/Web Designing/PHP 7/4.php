@@ -1,0 +1,10 @@
+<html>
+	<head>
+		<title>4</title>
+	</head>
+	<body>
+		<?php
+			echo "1-2-3-4-5-6-7-8-9";
+		?>
+	<body>
+</html>

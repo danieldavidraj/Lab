@@ -1,0 +1,5 @@
+com\softwarepatterns\flyweight\trees\TreeType.class
+com\softwarepatterns\flyweight\Main.class
+com\softwarepatterns\flyweight\trees\Tree.class
+com\softwarepatterns\flyweight\trees\TreeFactory.class
+com\softwarepatterns\flyweight\forest\Forest.class

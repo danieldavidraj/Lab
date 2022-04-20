@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1580786409 source:z:\sem 2\object oriented lab\c++ps_ii\1\main.cpp
+	<iostream>
+	"one.h"
+
+1580704383 z:\sem 2\object oriented lab\c++ps_ii\1\one.h
+	<string>
+
+1580704451 source:z:\sem 2\object oriented lab\c++ps_ii\1\1.cpp
+	"one.h"
+	<iostream>
+	<string>
+

@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<title>3</title>
+		<style>
+			input
+			{
+				margin-left:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<button onclick="Input()">Input</button><br><br>
+		<div id="div">
+		</div>
+		<script>
+			var text="";
+			function Input()
+			{
+				var x=prompt("Enter the number");
+				if(isEven(x)==true)
+				{
+					text+=x + " is Even<br><br>";
+					document.getElementById("div").innerHTML=text;
+				}
+				else
+				{
+					text+=x + " is Odd<br><br>";
+					document.getElementById("div").innerHTML=text;
+				}
+			}
+			function isEven(x)
+			{
+				if(x%2==0)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+		</script>
+	</body>
+</html>

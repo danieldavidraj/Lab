@@ -1,0 +1,49 @@
+<html>
+	<head>
+		<title>10</title>
+		<style>
+			table
+			{
+				margin:auto;
+				font-size:20px;
+				text-align:center;
+			}
+			td
+			{
+				color:red;
+			}
+		</style>
+	</head>
+	<body>
+		<table cellspacing="20">
+			<tr>
+				<th>Number</th>
+				<th>Square</th>
+				<th>Cube</th>
+			</tr>
+			<tr>
+				<td id="number">
+				</td>
+				<td id="square">
+				</td>
+				<td id="cube">
+				</td>
+			<tr>
+		</table>
+		<script>
+			var i;
+			var number="";
+			var square="";
+			var cube="";
+			for(i=1;i<=10;i++)
+			{
+				number+=i + "<br><br>";
+				square+=(i*i) + "<br><br>";
+				cube+=(i*i*i) + "<br><br>";
+			}
+			document.getElementById("number").innerHTML=number;
+			document.getElementById("square").innerHTML=square;
+			document.getElementById("cube").innerHTML=cube;
+		</script>
+	</body>
+</html>

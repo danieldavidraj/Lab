@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<title>7</title>
+		<style>
+			body
+			{
+				font-family:verdana;
+			}
+			div
+			{
+				border:solid yellow;
+				height:100px;
+				width:500px;
+				text-align:center;
+				font-size:50px;
+				padding-top:12px;
+				box-sizing:border-box;
+			}
+		</style>
+	</head>
+	<body>
+		<form>
+		Number 1:<input id="one"><br><br>
+		Number 2:<input id="two"><br><br>
+		Number 3:<input id="three"><br><br>
+		<input type="reset" onclick="Reset()">
+		</form>
+		<button onclick="Sum()">SUM</button>
+		<button onclick="Average()">AVERAGE</button>
+		<button onclick="Product()">PRODUCT</button>
+		<button onclick="Largest()">LARGEST</button>
+		<button onclick="Smallest()">SMALLEST</button>
+		<h1>ANSWER:</h1>
+		<div id="div">
+		</div>
+		<script>
+			var a,b,c;
+			function Sum()
+			{
+				a=parseInt(document.getElementById("one").value);
+				b=parseInt(document.getElementById("two").value);
+				c=parseInt(document.getElementById("three").value);
+				document.getElementById("div").innerHTML=a+b+c;
+				alert("Sum:"+ (a+b+c) );
+			}
+			function Average()
+			{
+				a=parseInt(document.getElementById("one").value);
+				b=parseInt(document.getElementById("two").value);
+				c=parseInt(document.getElementById("three").value);
+				document.getElementById("div").innerHTML=( (a+b+c)/3 ).toFixed(2);
+				alert("Average:"+ (a+b+c)/3 );
+			}
+			function Product()
+			{
+				a=parseInt(document.getElementById("one").value);
+				b=parseInt(document.getElementById("two").value);
+				c=parseInt(document.getElementById("three").value);
+				document.getElementById("div").innerHTML=a*b*c;
+				alert("Product:"+ (a*b*c) );
+			}
+			function Largest()
+			{
+				a=parseInt(document.getElementById("one").value);
+				b=parseInt(document.getElementById("two").value);
+				c=parseInt(document.getElementById("three").value);
+				document.getElementById("div").innerHTML=Math.max(a,b,c);
+				alert("Largest:"+ Math.max(a,b,c) );
+			}
+			function Smallest()
+			{
+				a=parseInt(document.getElementById("one").value);
+				b=parseInt(document.getElementById("two").value);
+				c=parseInt(document.getElementById("three").value);
+				document.getElementById("div").innerHTML=Math.min(a,b,c);
+				alert("Smallest:"+ Math.min(a,b,c) );
+			}
+			function Reset()
+			{
+				document.getElementById("div").innerHTML="";
+			}
+		</script>	
+	</body>
+</html>

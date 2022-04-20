@@ -1,0 +1,95 @@
+<html>
+	<head>
+		<title>17</title>
+		<style>
+			input
+			{
+				width:30px;
+			}
+			table
+			{
+				text-align:center;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Input Section</h1>
+		Enter a number in each of the boxes below and then click the button below to sort the numbers<br>
+		into ascending order.The sorted numbers will be placed in the output section.<br><br>
+		<table>
+			<tr>
+				<td>0</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+			</tr>
+			<tr>
+				<td><input id="0"></td>
+				<td><input id="1"></td>
+				<td><input id="2"></td>
+				<td><input id="3"></td>
+				<td><input id="4"></td>
+				<td><input id="5"></td>
+				<td><input id="6"></td>
+				<td><input id="7"></td>
+				<td><input id="8"></td>
+				<td><input id="9"></td>
+			</tr>
+		</table><br><br>
+		<button onclick="Ascending()">Sort in Ascending Order</button>
+		<br><br><hr>
+		<h1>Output Section</h1>
+		Once you click on the sort button above,the numbers in boxes will be sorted accordingly and then<br>
+		be placed in these boxes.<br><br>
+		<table>
+			<tr>
+				<td>0</td>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+			</tr>
+			<tr>
+				<td><input id="10"></td>
+				<td><input id="11"></td>
+				<td><input id="12"></td>
+				<td><input id="13"></td>
+				<td><input id="14"></td>
+				<td><input id="15"></td>
+				<td><input id="16"></td>
+				<td><input id="17"></td>
+				<td><input id="18"></td>
+				<td><input id="19"></td>
+			</tr>
+		</table>
+		<script>
+			function Ascending()
+			{
+				var i,j,x=[];
+				for(i=0;i<10;i++)
+				{
+					x[i]=document.getElementById(i).value;
+				}
+				x.sort(function(a,b)
+						{
+							return a-b;
+						} );
+				for(i=0;i<10;i++)
+				{
+					document.getElementById(i+10).value=x[i];
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,10 @@
+com\softwarepatterns\composite\shapes\Dot.class
+com\softwarepatterns\composite\editor\ImageEditor.class
+com\softwarepatterns\composite\editor\ImageEditor$EditorCanvas.class
+com\softwarepatterns\composite\shapes\BaseShape.class
+com\softwarepatterns\composite\Main.class
+com\softwarepatterns\composite\shapes\Circle.class
+com\softwarepatterns\composite\shapes\Shape.class
+com\softwarepatterns\composite\shapes\CompoundShape.class
+com\softwarepatterns\composite\shapes\Rectangle.class
+com\softwarepatterns\composite\editor\ImageEditor$EditorCanvas$1.class

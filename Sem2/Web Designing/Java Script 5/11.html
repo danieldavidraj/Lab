@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>11</title>
+		<style>
+			input
+			{
+				margin-left:10px;
+			}
+		</style>
+	</head>
+	<body>
+		Enter the five letter word:<input id="input" onblur="Combination()"><br><br>
+		<div id="div">
+		</div>
+		<script>
+			
+			function Combination()
+			{
+				var x=document.getElementById("input").value;
+				if(x.length!=5)
+				{
+					alert("Please Enter a 5-letter word");
+					document.getElementById("input").value="";
+				}
+				else
+				{
+					var arr=[];
+					var text="";
+					var i,j,k;
+					 for (i=0;i<x.length;i++)
+					 {
+						for(j=0;j<x.length;j++)
+						{
+							for(k=0;k<x.length;k++)
+							{
+								text+=x[i]+x[j]+x[k]+"<br>";
+								arr.push(x[i]+x[j]+x[k]);
+							}
+						}
+					}
+				}
+				document.getElementById("div").innerHTML=text;
+				alert(arr);
+			}
+		</script>
+	</body>
+</html>

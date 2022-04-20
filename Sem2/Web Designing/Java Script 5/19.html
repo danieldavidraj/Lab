@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>19</title>
+		<style>
+			div
+			{
+				border:solid 3px transparent;
+				border-image:linear-gradient(to right,red,violet,yellow);
+				border-image-slice:1;
+				padding:25px;
+				height:200px;
+				width:700px;
+				font-size:100px;
+				text-align:center;
+				padding-top:30px;
+				box-sizing:border-box;
+				text-shadow:0px 0px 10px #ffff00;
+			}
+		</style>
+	</head>
+	<body>
+		The first number is the number of inputs.......<br>
+		The answer will be diplayed after the count has reached.......<br><br>
+		<input id="input" placeholder="Enter the value"><br><br>
+		<button onclick="Min()">INPUT</button>
+		<h1>MIN:</h1>
+		<div id="div">
+		</div>
+		<script>
+			var f=0;
+			var n,min;
+			function Min()
+			{
+				var a=document.getElementById("input").value;
+				document.getElementById("input").value="";
+				if(a<0)
+				{
+					alert("Please Enter a non-negative number");
+				}
+				else
+				{
+					if(f==0)
+					{
+						n=a;
+						f++;
+					}
+					else
+					{
+						if(f==1)
+						{
+							min=a;
+							f++;
+						}
+						else
+						{
+							if(min>=a)
+							{
+								min=a;
+							}
+							f++;
+						}
+					}
+					if(f-1==n)
+					{
+						document.getElementById("div").innerHTML=min;
+						f=0;
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

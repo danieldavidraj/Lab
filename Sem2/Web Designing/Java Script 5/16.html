@@ -1,0 +1,58 @@
+<html>
+	<head>
+		<title>16</title>
+		<style>
+			body
+			{
+				font-family:verdana;
+			}
+			h1
+			{
+				text-align:center;
+			}
+			input
+			{
+				margin-left:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Mail Order House:-</h1>
+		<ol>
+			<li>Product 1: $2.98</li>
+			<li>Product 2: $4.50</li>
+			<li>Product 3: $9.98</li>
+			<li>Product 4: $4.49</li>
+			<li>Product 5: $6.87</li>
+		</ol>
+		<button onclick="Input()">Input</button><br><br>
+		Total Retail Price:
+		<div id="div">
+		</div>
+		<script>
+			function Input()
+			{
+				var n=prompt("Enter the count");
+				var num,quantity,total=0;
+				var i=0;
+				while(i<n)
+				{
+					l1:num=parseInt(prompt("Enter the product number"));
+					quantity=prompt("Enter the quantity");
+					switch(num)
+					{
+						case 1:total+=(2.98*quantity);break;
+						case 2:total+=(4.50*quantity);break;
+						case 3:total+=(9.98*quantity);break;
+						case 4:total+=(4.49*quantity);break;
+						case 5:total+=(6.87*quantity);break;
+						default:alert("No Such Product");
+								i--;break;
+					}
+					i++;
+				}
+				document.getElementById("div").innerHTML="$"+total;
+			}
+		</script>
+	</body>
+</html>

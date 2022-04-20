@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>10</title>
+		<style>
+			input
+			{
+				margin-left:10px;
+			}
+		</style>
+	</head>
+	<body>
+		Enter the credit card number:<input id="number" onblur="Verify()"><br><br>
+		<div id="div"></div>
+		<script>
+			function Verify()
+			{
+				var x=document.getElementById("number").value;
+				var i,sum=0;
+				for(i=x.length-2;i>=0;i=i-2)
+				{
+					if(x[i]*2>=10)
+					{
+						var t=x[i]*2;
+						sum+=(Math.floor(t/10))+(t%10);
+					}
+					else
+					{
+						sum+=x[i]*2;
+					}
+				}
+				for(i=x.length-1;i>=0;i=i-2)
+				{
+					sum+=parseInt(x[i]);
+				}
+				var text;
+				if(sum%10==0)
+				{
+					text="The credit card number is valid";
+				}
+				else
+				{
+					text="The credit card number is not valid";
+				}
+				document.getElementById("div").innerHTML=text;
+			}
+		</script>
+	</body>
+</html>

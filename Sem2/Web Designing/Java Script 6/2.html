@@ -1,0 +1,70 @@
+<html>
+	<head>
+		<title>2</title>
+		<style>
+			input
+			{
+				margin-left:10px;
+			}
+		</style>
+	</head>
+	<body>
+		<fieldset>
+			<legend>Co-Ordinates</legend>
+			<form>
+				X<sub>1</sub>:<input id="x1" onblur="Check1()"><br><br>
+				X<sub>2</sub>:<input id="x2" onblur="Check2()"><br><br>
+				Y<sub>1</sub>:<input id="y1" onblur="Check3()"><br><br>
+				Y<sub>2</sub>:<input id="y2" onblur="Check4()"><br><br>
+				<input type="reset">
+			</form>
+		</fieldset><br><br>
+		<button onclick="Distance()">Distance</button><br><br>
+		<div id="div">
+		</div>
+		<script>
+			var x1,x2,y1,y2;
+			function Check1()
+			{
+				x1=document.getElementById("x1").value;
+				if(x1%1==0)
+				{
+					alert("Please Enter a floating-point value");
+					document.getElementById("x1").value="";
+				}
+			}
+			function Check2()
+			{
+				x2=document.getElementById("x2").value;
+				if(x2%1==0)
+				{
+					alert("Please Enter a floating-point value");
+					document.getElementById("x2").value="";
+				}
+			}
+			function Check3()
+			{
+				y1=document.getElementById("y1").value;
+				if(y1%1==0)
+				{
+					alert("Please Enter a floating-point value");
+					document.getElementById("y1").value="";
+				}
+			}
+			function Check4()
+			{
+				y2=document.getElementById("y2").value;
+				if(y2%1==0)
+				{
+					alert("Please Enter a floating-point value");
+					document.getElementById("y2").value="";
+				}
+			}
+			function Distance()
+			{
+				var x=Math.sqrt( (Math.pow(x2-x1,2) )+( Math.pow(y2-y1,2) ) );
+				document.getElementById("div").innerHTML="Distance="+parseFloat( x.toFixed(2) );
+			}
+		</script>
+	</body>
+</html>

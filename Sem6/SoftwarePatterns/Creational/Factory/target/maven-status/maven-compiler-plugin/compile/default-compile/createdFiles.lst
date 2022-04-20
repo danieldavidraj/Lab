@@ -1,0 +1,8 @@
+com\softwarepatterns\factory\factory\Dialog.class
+com\softwarepatterns\factory\buttons\WindowsButton$1.class
+com\softwarepatterns\factory\factory\HtmlDialog.class
+com\softwarepatterns\factory\factory\WindowsDialog.class
+com\softwarepatterns\factory\buttons\HtmlButton.class
+com\softwarepatterns\factory\buttons\WindowsButton.class
+com\softwarepatterns\factory\buttons\Button.class
+com\softwarepatterns\factory\Main.class

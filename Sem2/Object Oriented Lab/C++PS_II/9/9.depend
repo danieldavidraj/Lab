@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1581304928 source:z:\sem 2\object oriented lab\c++ps_ii\9\nine.cpp
+	<iostream>
+	"nine.h"
+
+1581304938 z:\sem 2\object oriented lab\c++ps_ii\9\nine.h
+
+1581305075 source:z:\sem 2\object oriented lab\c++ps_ii\9\main.cpp
+	<iostream>
+	"nine.h"
+

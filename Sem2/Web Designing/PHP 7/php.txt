@@ -1,0 +1,8 @@
+http://10.1.67.156:8787/19pw/19pw09/Sem%202/Web%20Designing/PHP%207/1.php
+
+
+
+
+http://10.1.67.156:8787/phpmyadmin/index.php
+username:msc19pw09
+password:msc19pw

@@ -1,0 +1,32 @@
+<html>
+	<head>
+		<title>9</title>
+		<style>
+			input
+			{
+				margin-left:10px;
+			}
+		</style>
+	</head>
+	<body>
+		Enter the value:<input id="value" onkeyup="Domain()"><br><br>
+		<div id="div"></div>
+		<script>
+			function Domain()
+			{
+				var text;
+				var x=document.getElementById("value").value;
+				if(x.search("\\.com")!=-1 || x.search("\\.org")!=-1 || x.search("\\.net")!=-1 || x.search("\\.int")!=-1 || x.search("\\.edu")!=-1
+				|| x.search("\\.gov")!=-1 || x.search("\\.mil")!=-1 || x.search("\\.in")!=-1)
+				{
+					text="Represents a Domain";
+				}
+				else
+				{
+					text="Doesn't represent a Domain";
+				}
+				document.getElementById("div").innerHTML=text;
+			}
+		</script>
+	</body>
+</html>

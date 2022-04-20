@@ -1,0 +1,7 @@
+com\softwarepatterns\bridge\devices\Tv.class
+com\softwarepatterns\bridge\remotes\BasicRemote.class
+com\softwarepatterns\bridge\devices\Radio.class
+com\softwarepatterns\bridge\devices\Device.class
+com\softwarepatterns\bridge\Main.class
+com\softwarepatterns\bridge\remotes\AdvancedRemote.class
+com\softwarepatterns\bridge\remotes\Remote.class

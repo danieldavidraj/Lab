@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<title>11</title>
+	<style>
+		body
+		{
+			font-size:25px;
+			font-family:verdana;
+		}
+		.relative
+		{
+			border:solid  #76d7c4 3px;
+			position:absolute;
+		}
+		.absolute
+		{
+			border:solid  #f30cf7 3px;
+			position:relative;
+			float:right;
+			height:300px;
+			width:600px;
+			margin-top:50px;
+		}
+	</style>
+	</head>
+	<body>
+		<div class="relative">
+			<div style="background-color:#76d7c4; width:300px; ">
+				&lt;div class="relative"&gt;
+			</div>
+			This element is relatively positioned.If this element was position:static; its absolutely positioned child would escape and would be
+			positioned relative to the document body.
+			<div class="absolute">
+				<div style="background-color: #f30cf7 ; width:300px;">
+				&lt;div class="absolute"&gt;
+				</div>
+				This element is absolutely positioned.Its positioned relatively to its parent.<br><br><br><br><br><br><br>
+				<div style="background-color:#f30cf7; width:200px; float:right;">
+				&lt;/div&gt;
+				</div>
+			</div>
+			<div style="background-color:#76d7c4; width:200px; clear:right; float:right; margin-top:50px;">
+				&lt;/div&gt;
+			</div>
+		</div>
+	</body>
+</html>
+			

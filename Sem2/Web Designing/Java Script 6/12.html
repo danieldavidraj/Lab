@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>12</title>
+		<style>
+			div
+			{
+				font-size:25px;
+				margin-left:100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div"></div>
+		<script>
+			var color=["Blue","Green","Red","Orange","Violet","Indigo","Yellow"];
+			var o=["st","nd","rd","th"];
+			var text="",j=0;
+			for(var i=0;i<color.length;i++)
+			{
+				if(j>3)
+				{
+					j=3;
+				}
+				text+=(i+1)+o[j]+" choice is "+color[i]+"<br><br>";
+				j++;
+			}
+			document.getElementById("div").innerHTML=text;
+		</script>
+	</body>
+</html>

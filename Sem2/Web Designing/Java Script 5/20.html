@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>20</title>
+	</head>
+	<body>
+		<form>
+			Enter the string:<input id="string" onblur="Check()">
+		</form>
+		<div id="div">
+		</div>
+		<script>
+			function Check()
+			{
+				var string;
+				string=document.getElementById("string").value;
+				if(string.length!=5)
+				{
+					document.getElementById("string").value="";
+					alert("Please Enter 5 digit Integer");
+				}
+				else
+				{
+					Palindrome(string);
+				}
+			}
+			function Palindrome(string)
+			{
+				var i,j=0;
+				var rev=new Array();
+				for(i=string.length-1;i>=0;i--)
+				{
+					rev[string.length-i-1]=string[i];
+				}
+				rev=rev.join("");
+				var n=string.localeCompare(rev);
+				if(n==0)
+				{
+					document.getElementById("div").innerHTML=string+" is a Palindrome";
+				}
+				else
+				{
+					document.getElementById("div").innerHTML=string+" is not a Palindrome";
+				}
+			}
+		</script>
+	</body>
+</html>

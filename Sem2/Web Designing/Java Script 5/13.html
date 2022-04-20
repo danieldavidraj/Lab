@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>13</title>
+	</head>
+	<body>
+		<form>
+			<input type="date" id="date" onchange="Time()">
+		</form>
+		<p id="time">
+		</p>
+		<script>
+			function Time()
+			{
+				var d=document.getElementById("date").value;
+				var r=d.split("-");
+				var date=new Date(r[0],r[1]-1,r[2]);
+				var text="";
+				text+=date.toString() + "<br><br>";
+				text+=date.toUTCString() + "<br><br>";
+				text+=date.toDateString() + "<br><br>";
+				
+				text+=date.getFullYear() + "<br><br>";
+				text+=date.getMonth() + "<br><br>";
+				text+=date.getDate() + "<br><br>";
+				
+				text+=date.getTime() + "<br><br>";
+				text+=date.getHours() + "<br><br>";
+				text+=date.getMinutes() + "<br><br>";
+				text+=date.getSeconds() + "<br><br>";
+				text+=date.getMilliseconds() + "<br><br>";
+				text+=date.getDay() + "<br><br>";
+				document.getElementById("time").innerHTML=text;
+			}
+		</script>
+	</body>
+</html>

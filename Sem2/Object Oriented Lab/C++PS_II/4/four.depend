@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1580790166 source:z:\sem 2\object oriented lab\c++ps_ii\four\main.cpp
+	<iostream>
+	"four.h"
+
+1580790032 z:\sem 2\object oriented lab\c++ps_ii\four\four.h
+
+1580790166 source:z:\sem 2\object oriented lab\c++ps_ii\4\main.cpp
+	<iostream>
+	"four.h"
+
+1580790032 z:\sem 2\object oriented lab\c++ps_ii\4\four.h
+
+1580790438 source:z:\sem 2\object oriented lab\c++ps_ii\4\four.cpp
+	<iostream>
+	"four.h"
+
